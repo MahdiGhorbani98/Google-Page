@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Google</title>
+    <link rel="stylesheet" href="./CssReset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/32dbdc5f9a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="search" class="searchArea">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" width="300" alt="google" />
+        <div class="circle">
+            <i class="fa fa-search"></i>
+            <input type="text" class="inputbar" name="input" id="input" oninput="visibleClose()" />
+            <i class="fa  fa-times clearQuery " id="clearQuery" onclick="hiddenClose()"></i>
+            <i class="fa fa-microphone microphone"></i>
+        </div>
+        <div class="buttons">
+            <button class="button">Google Search</button>
+            <button class="button">I'm Feeling Lucky</button>
+        </div>
+
+        <p class="Googleoffered">Google offered in:
+            <a href="blank">فارسی</a>
+        </p>
+
+        <footer>
+            <p>United Arab Emirates</p>
+
+            <div class="links">
+                <div>
+                    <a href="blank">About</a>
+                    <a href="blank">Advertising</a>
+                    <a href="blank">Business</a>
+                    <a href="blank">How Search works</a>
+                </div>
+
+                <div>
+                    <a href="blank">Privacy</a>
+                    <a href="blank">Terms</a>
+                    <a href="blank">Settings</a>
+                </div>
+
+
+            </div>
+
+        </footer>
+    </div>
+
+
+
+
+    <script>
+        function visibleClose() {
+            var x = document.getElementById("clearQuery");
+            x.style.visibility = "visible"
+
+            var inputtext = document.getElementById("input")
+            if (inputtext.value === "") {
+                x.style.visibility = "hidden"
+            }
+        }
+
+        function hiddenClose() {
+            var x = document.getElementById("clearQuery");
+            x.style.visibility = "hidden"
+
+            document.getElementById("input").value = "";
+
+        }
+    </script>
+
+</body>
+
+</html>
